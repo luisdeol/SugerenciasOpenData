@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">
+                            <i class="fa fa-arrows-h">
+
+                            </i>
+                        </a>
+                            <table class="table table-hover">
+                                <thead class="thead-inverse">
+                                    <tr>
+                                {% for item in headers_list %}
+                                        <td>{{  item }}</td>
+                                {% endfor %}
+                                    </tr>
+                                </thead>
+                                {% for listitem in list %}
+                                    <tr>
+                                    <td> {{ listitem.FECHA_PRES }}</td>
+                                    <td> {{ listitem.HORA_PRES }}</td>
+                                    <td> {{ listitem.ID_ESTADO }}</td>
+                                    <td> {{ listitem.DESC_CANALENTRADA }}</td>
+                                    <td> {{ listitem.NUMFIRMAS }}</td>
+                                    <td> {{ listitem.DESC_TIPOCANALENTRADA }}</td>
+                                    <td> {{ listitem.DESC_MATERIAL_COMPLETO }}</td>
+                                    <td> {{ listitem.ID_PROCEDIMIENTO }}</td>
+                                    <td> {{ listitem.DESC_PROCEDIMIENTO }}</td>
+                                    <td> {{ listitem.NUMEXPEDIENTE }}</td>
+                                    <td> {{ listitem.ID_TIPOSOLICITUD }}</td>
+                                    <td> {{ listitem.DESC_SUBMATERIA_COMPLETO }}</td>
+                                    <td> {{ listitem.DESC_TIPOSOLICITUD }}</td>
+                                    <td> {{ listitem.DESC_ESTADO }}</td>
+                                    <td> {{ listitem.ID_TIPOCANALENTRADA }}</td>
+                                    <td> {{ listitem.ID_MATERIA }}</td>
+                                    <td> {{ listitem.ID_CANALENTRADA }}</td>
+                                    <td> {{ listitem.ID_SUBMATERIA }}</td>
+{#                                    {% for key,value in item.items %}#}
+{#                                    <td><a> {{ value }}</a></td>#}
+{#                                    {% endfor %}#}
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}

@@ -1,0 +1,12 @@
+﻿#searchbox{
+    width:100%;
+
+}
+#form {
+    overflow: hidden;
+    padding-right:.5em;
+}
+
+#btn {
+    float:right;
+}
